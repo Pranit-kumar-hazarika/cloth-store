@@ -1,26 +1,21 @@
 const WHATSAPP_NUMBER = "6003519694"; // Replace with your number  
 
 const PRODUCTS = [
-  { id:1, title:"Daisy Knit Cardigan", price:799, category:"boys", img:"https://via.placeholder.com/400x400/f7d7e2/6f4bb9?text=Cardigan", colors:["Pink","Cream","Lavender"], sizes:["S","M","L","XL"], badge:"Popular"},
-  { id:2, title:"Pastel Hoodie", price:1299, category:"boys", img:"https://via.placeholder.com/400x400/e6f0ff/6f4bb9?text=Hoodie", colors:["White","Blue","Mint"], sizes:["XS","S","M"]},
-  { id:3, title:"Winter Beanie Set", price:499, category:"boys", img:"https://via.placeholder.com/400x400/fef3f6/6f4bb9?text=Beanie", colors:["Grey","Pink","Beige"], sizes:["One Size"], badge:"New"},
-  { id:4, title:"Layered Sweater", price:999, category:"boys", img:"https://via.placeholder.com/400x400/f7d7e2/6f4bb9?text=Sweater", colors:["Navy","Maroon","Grey"], sizes:["M","L","XL"]},
-  { id:5, title:"Kids Cozy Jacket", price:1199, category:"boys", img:"https://via.placeholder.com/400x400/e6f0ff/6f4bb9?text=Jacket", colors:["Green","Yellow","Pink"], sizes:["2-3Y","4-5Y","6-7Y"]},
-  { id:6, title:"Classic Scarf", price:299, category:"boys", img:"https://via.placeholder.com/400x400/fef3f6/6f4bb9?text=Scarf", colors:["Beige","Brown","Burgundy"], sizes:["One Size"]},
-  { id:7, title:"Turtleneck Top", price:899, category:"boys", img:"https://via.placeholder.com/400x400/f7d7e2/6f4bb9?text=Turtleneck", colors:["Black","White","Camel"], sizes:["S","M","L"]},
-  { id:8, title:"Kids Thermal Set", price:749, category:"boys", img:"https://via.placeholder.com/400x400/e6f0ff/6f4bb9?text=Thermal", colors:["Grey","Navy"], sizes:["2-4Y","5-7Y"], badge:"Hot"}
+  { id:1, title:"Classic T-Shirt", price:499, category:"boys", img:"https://via.placeholder.com/400x400/ff6b6b/ffffff?text=T-Shirt", sizes:["S","M","L","XL"], badge:"Popular"},
+  { id:2, title:"Formal Shirt", price:899, category:"boys", img:"https://via.placeholder.com/400x400/4dabf7/ffffff?text=Shirt", sizes:["S","M","L","XL"]},
+  { id:3, title:"Hooded Sweatshirt", price:1299, category:"boys", img:"https://via.placeholder.com/400x400/f08c00/ffffff?text=Hoodie", sizes:["S","M","L","XL"], badge:"New"},
+  { id:4, title:"Graphic Tee", price:599, category:"boys", img:"https://via.placeholder.com/400x400/ffd43b/000000?text=T-Shirt", sizes:["S","M","L","XL"]},
+  { id:5, title:"Casual Hoodie", price:1199, category:"boys", img:"https://via.placeholder.com/400x400/6ab04c/ffffff?text=Hoodie", sizes:["S","M","L","XL"], badge:"Hot"},
+  { id:6, title:"Slim Fit Shirt", price:999, category:"boys", img:"https://via.placeholder.com/400x400/ff7979/ffffff?text=Shirt", sizes:["S","M","L","XL"]},
 ];
 
-/* ========== STATE ========== */
 let cart = [];
 let filteredProducts = [...PRODUCTS];
 
-/* ========== HELPERS ========== */
 const q = (sel) => document.querySelector(sel);
 const qa = (sel) => [...document.querySelectorAll(sel)];
 const formatPrice = (n) => "₹" + Number(n).toLocaleString("en-IN");
 
-/* ========== RENDER PRODUCTS ========== */
 function renderProducts(list = PRODUCTS){
   filteredProducts = list;
   const grid = q("#productsGrid");
@@ -59,13 +54,6 @@ function renderProducts(list = PRODUCTS){
               ${p.sizes.map(s => `<option value="${s}">${s}</option>`).join("")}
             </select>
           </div>
-
-          <div class="option-group">
-            <div class="option-label">Color</div>
-            <select class="color" data-id="${p.id}">
-              ${p.colors.map(c => `<option value="${c}">${c}</option>`).join("")}
-            </select>
-          </div>
         </div>
 
         <div class="card-actions">
@@ -89,10 +77,9 @@ function renderProducts(list = PRODUCTS){
 function addToCart(e){
   const id = Number(e.currentTarget.dataset.id);
   const size = q(`select.size[data-id="${id}"]`).value;
-  const color = q(`select.color[data-id="${id}"]`).value;
   const prod = PRODUCTS.find(x => x.id === id);
   
-  const existing = cart.find(i => i.id === id && i.size === size && i.color === color);
+  const existing = cart.find(i => i.id === id && i.size === size);
 
   if(existing){
     existing.qty++;
@@ -103,7 +90,6 @@ function addToCart(e){
       price: prod.price, 
       img: prod.img, 
       size, 
-      color, 
       qty: 1 
     });
   }
@@ -111,6 +97,7 @@ function addToCart(e){
   updateCart();
   showFlash("✓ Added to cart");
 }
+
 
 function updateCart(){
   updateCartCount();
