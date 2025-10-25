@@ -1,14 +1,14 @@
-const WHATSAPP_NUMBER = "919876543210"; // Replace with your number
+const WHATSAPP_NUMBER = "6003519694"; // Replace with your number  
 
 const PRODUCTS = [
-  { id:1, title:"Daisy Knit Cardigan", price:799, category:"women", img:"https://via.placeholder.com/400x400/f7d7e2/6f4bb9?text=Cardigan", colors:["Pink","Cream","Lavender"], sizes:["S","M","L","XL"], badge:"Popular"},
-  { id:2, title:"Pastel Hoodie", price:1299, category:"kids", img:"https://via.placeholder.com/400x400/e6f0ff/6f4bb9?text=Hoodie", colors:["White","Blue","Mint"], sizes:["XS","S","M"]},
-  { id:3, title:"Winter Beanie Set", price:499, category:"women", img:"https://via.placeholder.com/400x400/fef3f6/6f4bb9?text=Beanie", colors:["Grey","Pink","Beige"], sizes:["One Size"], badge:"New"},
-  { id:4, title:"Layered Sweater", price:999, category:"men", img:"https://via.placeholder.com/400x400/f7d7e2/6f4bb9?text=Sweater", colors:["Navy","Maroon","Grey"], sizes:["M","L","XL"]},
-  { id:5, title:"Kids Cozy Jacket", price:1199, category:"kids", img:"https://via.placeholder.com/400x400/e6f0ff/6f4bb9?text=Jacket", colors:["Green","Yellow","Pink"], sizes:["2-3Y","4-5Y","6-7Y"]},
-  { id:6, title:"Classic Scarf", price:299, category:"women", img:"https://via.placeholder.com/400x400/fef3f6/6f4bb9?text=Scarf", colors:["Beige","Brown","Burgundy"], sizes:["One Size"]},
-  { id:7, title:"Turtleneck Top", price:899, category:"women", img:"https://via.placeholder.com/400x400/f7d7e2/6f4bb9?text=Turtleneck", colors:["Black","White","Camel"], sizes:["S","M","L"]},
-  { id:8, title:"Kids Thermal Set", price:749, category:"kids", img:"https://via.placeholder.com/400x400/e6f0ff/6f4bb9?text=Thermal", colors:["Grey","Navy"], sizes:["2-4Y","5-7Y"], badge:"Hot"}
+  { id:1, title:"Daisy Knit Cardigan", price:799, category:"boys", img:"https://via.placeholder.com/400x400/f7d7e2/6f4bb9?text=Cardigan", colors:["Pink","Cream","Lavender"], sizes:["S","M","L","XL"], badge:"Popular"},
+  { id:2, title:"Pastel Hoodie", price:1299, category:"boys", img:"https://via.placeholder.com/400x400/e6f0ff/6f4bb9?text=Hoodie", colors:["White","Blue","Mint"], sizes:["XS","S","M"]},
+  { id:3, title:"Winter Beanie Set", price:499, category:"boys", img:"https://via.placeholder.com/400x400/fef3f6/6f4bb9?text=Beanie", colors:["Grey","Pink","Beige"], sizes:["One Size"], badge:"New"},
+  { id:4, title:"Layered Sweater", price:999, category:"boys", img:"https://via.placeholder.com/400x400/f7d7e2/6f4bb9?text=Sweater", colors:["Navy","Maroon","Grey"], sizes:["M","L","XL"]},
+  { id:5, title:"Kids Cozy Jacket", price:1199, category:"boys", img:"https://via.placeholder.com/400x400/e6f0ff/6f4bb9?text=Jacket", colors:["Green","Yellow","Pink"], sizes:["2-3Y","4-5Y","6-7Y"]},
+  { id:6, title:"Classic Scarf", price:299, category:"boys", img:"https://via.placeholder.com/400x400/fef3f6/6f4bb9?text=Scarf", colors:["Beige","Brown","Burgundy"], sizes:["One Size"]},
+  { id:7, title:"Turtleneck Top", price:899, category:"boys", img:"https://via.placeholder.com/400x400/f7d7e2/6f4bb9?text=Turtleneck", colors:["Black","White","Camel"], sizes:["S","M","L"]},
+  { id:8, title:"Kids Thermal Set", price:749, category:"boys", img:"https://via.placeholder.com/400x400/e6f0ff/6f4bb9?text=Thermal", colors:["Grey","Navy"], sizes:["2-4Y","5-7Y"], badge:"Hot"}
 ];
 
 /* ========== STATE ========== */
