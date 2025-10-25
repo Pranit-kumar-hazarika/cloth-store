@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Winter Era Fashion - Premium Winter Wear</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation -->
+  <header class="nav">
+    <div class="nav-left">
+      <img src="https://via.placeholder.com/68x68/f7d7e2/6f4bb9?text=WEF" alt="Winter Era Fashion" class="brand-logo"/>
+      <div class="brand-text">
+        <div class="brand-title">Winter Era Fashion</div>
+        <div class="brand-sub">Ladies & Kids Premium Wear</div>
+      </div>
+    </div>
+
+    <div class="nav-right">
+      <div class="search-wrapper">
+        <span class="search-icon">🔍</span>
+        <input id="searchInput" placeholder="Search products..." />
+      </div>
+
+      <div class="filters">
+        <select id="categoryFilter">
+          <option value="all">All Categories</option>
+          <option value="women">Women</option>
+          <option value="men">Men</option>
+          <option value="kids">Kids</option>
+        </select>
+
+        <select id="sortSelect">
+          <option value="default">Sort By</option>
+          <option value="price-asc">Price: Low → High</option>
+          <option value="price-desc">Price: High → Low</option>
+          <option value="name">Name A-Z</option>
+        </select>
+      </div>
+
+      <button id="cartBtn" class="cart-btn">
+        🛒 <span id="cartCount" class="cart-count">0</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-inner">
+      <h1>Cozy Winter Collection</h1>
+      <p>Discover premium winter essentials for ladies & kids. Handpicked styles in soft pastels and elegant designs. Order directly via WhatsApp!</p>
+      <a href="#products" class="btn">
+        Shop Collection
+        <span>→</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <main class="products-section" id="products">
+    <div class="section-header">
+      <h2>Featured Products</h2>
+    </div>
+    <div class="products-grid" id="productsGrid"></div>
+  </main>
+
+  <!-- Cart Drawer -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside id="cartDrawer" class="cart-drawer">
+    <div class="cart-header">
+      <h3>Shopping Cart</h3>
+      <button id="closeCart">✕</button>
+    </div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-footer">
+      <div class="cart-summary">
+        <div class="summary-row">
+          <span>Items:</span>
+          <span id="itemCount">0</span>
+        </div>
+        <div class="summary-row total">
+          <span>Total:</span>
+          <strong id="cartTotal">₹0</strong>
+        </div>
+      </div>
+      <div class="cart-actions">
+        <button id="clearCart" class="btn ghost">Clear Cart</button>
+        <button id="placeOrder" class="btn">Order on WhatsApp</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Confirmation Modal -->
+  <div id="confirmModal" class="modal">
+    <div class="modal-content">
+      <h4>Confirm Your Order</h4>
+      <p id="confirmText">Ready to place your order? We'll open WhatsApp with your cart details.</p>
+      <div class="modal-actions">
+        <button id="cancelConfirm" class="btn ghost">Cancel</button>
+        <button id="confirmYes" class="btn">Open WhatsApp</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-main">© <span id="year"></span> Winter Era Fashion · Jorhat, Assam</div>
+      <div class="footer-note">Orders & inquiries via WhatsApp · Fast delivery across India</div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
