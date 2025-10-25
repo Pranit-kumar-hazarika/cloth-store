@@ -161,6 +161,7 @@ body{
   animation:pulse .5s ease;
 }
 
+
 /* HERO */
 .hero{
   padding:60px 32px;
@@ -281,6 +282,9 @@ body{
   grid-template-columns:repeat(auto-fill, minmax(280px, 1fr));
   gap:24px;
 }
+
+
+
 
 /* PRODUCT CARD */
 .card{
