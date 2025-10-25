@@ -190,10 +190,8 @@ body{
 }
 .hero h1{
   font-size:clamp(28px, 5vw, 42px);
+  color:white;
   margin:0 0 12px;
-  background:#ffffff;
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
   font-weight:700;
 }
 .hero p{
