@@ -1,13 +1,15 @@
 const WHATSAPP_NUMBER = "6003519694"; // Replace with your number  
 
 const PRODUCTS = [
-  { id:1, title:"Classic T-Shirt", price:499, category:"boys", img:"https://via.placeholder.com/400x400/ff6b6b/ffffff?text=T-Shirt", sizes:["S","M","L","XL"], badge:"Popular"},
-  { id:2, title:"Formal Shirt", price:899, category:"boys", img:"https://via.placeholder.com/400x400/4dabf7/ffffff?text=Shirt", sizes:["S","M","L","XL"]},
-  { id:3, title:"Hooded Sweatshirt", price:1299, category:"boys", img:"https://via.placeholder.com/400x400/f08c00/ffffff?text=Hoodie", sizes:["S","M","L","XL"], badge:"New"},
-  { id:4, title:"Graphic Tee", price:599, category:"boys", img:"https://via.placeholder.com/400x400/ffd43b/000000?text=T-Shirt", sizes:["S","M","L","XL"]},
-  { id:5, title:"Casual Hoodie", price:1199, category:"boys", img:"https://via.placeholder.com/400x400/6ab04c/ffffff?text=Hoodie", sizes:["S","M","L","XL"], badge:"Hot"},
-  { id:6, title:"Slim Fit Shirt", price:999, category:"boys", img:"https://via.placeholder.com/400x400/ff7979/ffffff?text=Shirt", sizes:["S","M","L","XL"]},
+  { id:1, title:"Black Hoodie", price:1299, category:"boys", img:"/files/blackhoodies.png", sizes:["S","M","L","XL"] },
+  { id:2, title:"Black Printed Tee", price:899, category:"boys", img:"/files/blackprinted.png", sizes:["S","M","L","XL"] },
+  { id:3, title:"Blue Shirt", price:999, category:"men", img:"/files/blue-shirt.png", sizes:["S","M","L","XL"] },
+  { id:4, title:"Gez Blue T-Shirt", price:799, category:"boys", img:"/files/gezbluetshirt.png", sizes:["S","M","L","XL"] },
+  { id:5, title:"NYC Hoodie", price:1399, category:"boys", img:"/files/nyc hoodies.png", sizes:["S","M","L","XL"] },
+  { id:6, title:"Spider Hoodie", price:1499, category:"boys", img:"/files/spide-hoodie.png", sizes:["S","M","L","XL"] },
+  { id:7, title:"White Shirt", price:1099, category:"men", img:"/files/white-shirt.png", sizes:["S","M","L","XL"] },
 ];
+
 
 let cart = [];
 let filteredProducts = [...PRODUCTS];
