@@ -1,4 +1,4 @@
-const WHATSAPP_NUMBER = "6003519694"; // Replace with your number  
+const WHATSAPP_NUMBER = "+91 6003519694"; // Replace with your number  
 
 const PRODUCTS = [
   { id:1, title:"Black Hoodie", price:1299, category:"boys", img:"/files/blackhoodies.png", sizes:["S","M","L","XL"] },
