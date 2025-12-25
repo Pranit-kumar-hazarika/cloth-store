@@ -792,3 +792,46 @@ select.size:focus, select.color:focus{
   }
   .modal-content{padding:24px}
 }
+
+
+/* ================= DARK THEME ================= */
+body.dark {
+  --bg: #0f172a;
+  --card: #1e293b;
+  --muted: #cbd5e1;
+
+  --accent: #f43f5e;
+  --accent-hover: #fb7185;
+  --primary: #f43f5e;
+  --primary-dark: #be123c;
+
+  background: linear-gradient(180deg, #020617 0%, #0f172a 100%);
+  color: #e5e7eb;
+}
+
+/* Dark mode component tweaks */
+body.dark .nav {
+  background: rgba(15, 23, 42, 0.9);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+body.dark .filters select,
+body.dark .search-wrapper input,
+body.dark select.size {
+  background: #020617;
+  color: #e5e7eb;
+  border-color: #334155;
+}
+
+body.dark .cart-drawer,
+body.dark .modal-content {
+  background: #020617;
+}
+
+body.dark .card {
+  border-color: rgba(255,255,255,0.05);
+}
+
+body.dark .site-footer {
+  background: linear-gradient(180deg, transparent, #020617);
+}
